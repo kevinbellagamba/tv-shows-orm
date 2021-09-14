@@ -1,0 +1,17 @@
+* {
+    border: crimson dotted 1px;
+}
+
+.showsTable {
+    padding-bottom: 40px;
+    border-bottom: 3px black solid;
+}
+
+table, th, td, tr{
+    text-align: center;
+    align-self: center;
+    margin: 0px auto;
+    border: 2px black solid;
+    font-size: 16px;
+    padding: 5px;
+}
