@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <p><a href="/shows">Go Back</a> </p>
+    {% if messages %}
+    <ul class="messages">    
+        {% for message in messages %}    
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+        {% endfor %}
+    </ul>
+    {% endif %}
     <div class=editShow>
         <h2>Edit Show</h2>
-        <form action="/shows/update" method="POST" id="editShow">
+        <form action="/shows/{{ show.id }}/update" method="POST" id="editShow">
             {%csrf_token%}
             <label for="">Title</label>
             <input type="text" name="title" value="{{show.title}}">
