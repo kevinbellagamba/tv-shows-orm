@@ -63,4 +63,3 @@ def deleteShow(request, show_id):
     delete.delete()
     return redirect('/shows')
 
-
